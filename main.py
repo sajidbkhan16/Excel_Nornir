@@ -8,10 +8,6 @@ from nornir.plugins.tasks import commands
 from nornir.plugins.tasks.networking import netmiko_send_command, netmiko_send_config
 from nornir.plugins.functions.text import print_result
 
-# define env variable so that textfsm can recognise ntc-template
-templates = os.path.dirname(os.path.abspath(__file__)) + r'\ntc-templates\templates'
-os.environ['NET_TEXTFSM']= templates
-
 # define the path of configuration file stored in excel format
 excel_path = os.path.join(os.getcwd(), r'Excel_folder\configurations\config.xlsx')
 

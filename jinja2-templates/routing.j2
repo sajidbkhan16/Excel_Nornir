@@ -1,0 +1,4 @@
+{% if vrf != "Global" -%}
+    ip route vrf {{vrf}} {{Destination_IP}} {{Mask}} {{Next_hop_Interface}} {{Next_hop_IP}}
+{% endif -%}
+

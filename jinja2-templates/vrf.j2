@@ -1,0 +1,6 @@
+{% if vrf != "Global" -%}
+ip vrf {{vrf}}
+  rd {{rd}}
+  route-target import {{rt_import}}
+  route-target export {{rt_export}}
+{% endif -%}

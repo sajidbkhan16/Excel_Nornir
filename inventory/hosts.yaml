@@ -1,0 +1,43 @@
+---
+host1:
+    hostname: 192.168.20.2
+    port: 22
+    username: cisco
+    password: cisco
+    platform: cisco_ios
+    groups:
+        - PE_Routers
+    data:
+        site: I9
+        role: Router
+        device: PE
+        node: host1
+
+host2:
+    hostname: 192.168.20.6
+    port: 22
+    username: cisco
+    password: cisco
+    platform: cisco_ios
+    groups:
+        - PE_Routers
+    data:
+        site: G9
+        role: Router
+        device: PE
+        node: host2
+
+
+host3:
+    hostname: 192.168.20.10
+    port: 22
+    username: cisco
+    password: cisco
+    platform: cisco_ios
+    groups:
+        - PE_Routers
+    data:
+        site: G11
+        role: Router
+        device: PE
+        node: host3

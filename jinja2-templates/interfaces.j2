@@ -1,0 +1,8 @@
+interface {{interface}}
+  description {{description}}
+  {% if vrf != "Global" -%}
+  ip vrf forwarding {{vrf}}
+  {% endif -%}
+  ip address {{ip}} {{mask}}
+  no shutdown
+  

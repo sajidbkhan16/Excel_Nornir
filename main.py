@@ -164,8 +164,7 @@ nr = InitNornir(config_file="config.yaml")
 
 for H in NodeSetFinal:
     node = nr.filter(node=H) 
-    #print(node.inventory.hosts.keys())
-    print(H)
+    print('configuration of {} is under process'.format(H))
     config_set = Dict_config_final[H]
     config_set = config_set.strip('\n')
    

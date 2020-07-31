@@ -1,6 +1,5 @@
 from helper_func import * 
 import os
-import json
 import pandas as pd
 from jinja2 import Template
 from nornir import InitNornir
@@ -60,7 +59,11 @@ NodeSetRouting = set()    # Unique P2P Node Set
 for Dict in df_list_routing:
     NodeSetRouting.add(Dict['Node Name'])
 
-NodeSetFinal = NodeSetRouting.union(NodeSetP2P)
+NodeSetVRF = set()    # Unique P2P Node Set
+for Dict in df_list_vrf:
+    NodeSetVRF.add(Dict['Node Name'])
+
+NodeSetFinal = NodeSetRouting.union(NodeSetP2P).union(NodeSetVRF)
 
 # replace the old key values with new one. For example, 'Node A Name' with 'Node Name' 
 for dict_a in df_listA:
